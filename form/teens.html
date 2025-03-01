@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Reflection Form - Remaja</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Self-Reflection untuk Remaja (13-18 Tahun)</h1>
+    <!-- Perhatikan atribut action di sini -->
+    <form id="reflection-form" action="results.html?category=teens" method="POST">
+      <!-- Bagian 1: Emosi dan Kesejahteraan Mental -->
+      <div class="section">
+        <h3>Bagian 1: Emosi dan Kesejahteraan Mental</h3>
+        <div class="question">
+          <label>1. Seberapa puaskah kamu dengan harimu hari ini?</label>
+          <label><input type="radio" name="satisfaction" value="5"> ⭐⭐⭐⭐⭐ Sangat puas</label>
+          <label><input type="radio" name="satisfaction" value="4"> ⭐⭐⭐⭐ Cukup puas</label>
+          <label><input type="radio" name="satisfaction" value="3"> ⭐⭐⭐ Biasa saja</label>
+          <label><input type="radio" name="satisfaction" value="2"> ⭐⭐ Kurang puas</label>
+          <label><input type="radio" name="satisfaction" value="1"> ⭐ Tidak puas sama sekali</label>
+        </div>
+        <div class="question">
+          <label>2. Apa yang paling memengaruhi suasana hatimu hari ini?</label>
+          <input type="text" name="mood-influence">
+        </div>
+        <div class="question">
+          <label>3. Seberapa sering kamu merasa stres akhir-akhir ini?</label>
+          <label><input type="radio" name="stress-level" value="rarely"> 🟩 Jarang sekali</label>
+          <label><input type="radio" name="stress-level" value="sometimes"> 🟨 Kadang-kadang</label>
+          <label><input type="radio" name="stress-level" value="often"> 🟥 Sering</label>
+        </div>
+        <div class="question">
+          <label>4. Apa yang kamu lakukan untuk meredakan stres?</label>
+          <input type="text" name="stress-relief">
+        </div>
+      </div>
+
+      <!-- Bagian 2: Sekolah dan Masa Depan -->
+      <div class="section">
+        <h3>Bagian 2: Sekolah dan Masa Depan</h3>
+        <div class="question">
+          <label>5. Bagaimana perasaanmu tentang sekolah/mata pelajaranmu hari ini?</label>
+          <label><input type="radio" name="school-feeling" value="very-interested"> 🟩 Sangat tertarik</label>
+          <label><input type="radio" name="school-feeling" value="interested"> 🟨 Cukup tertarik</label>
+          <label><input type="radio" name="school-feeling" value="not-interested"> 🟥 Tidak tertarik</label>
+        </div>
+        <div class="question">
+          <label>6. Apa pencapaian terbesarmu hari ini?</label>
+          <input type="text" name="achievement">
+        </div>
+        <div class="question">
+          <label>7. Apa tantangan terbesar yang kamu hadapi hari ini? Bagaimana cara kamu mengatasinya?</label>
+          <textarea name="challenge"></textarea>
+        </div>
+        <div class="question">
+          <label>8. Apa yang ingin kamu pelajari atau tingkatkan minggu depan?</label>
+          <input type="text" name="learning-goal">
+        </div>
+      </div>
+
+      <!-- Bagian 3: Hubungan Sosial -->
+      <div class="section">
+        <h3>Bagian 3: Hubungan Sosial</h3>
+        <div class="question">
+          <label>9. Siapa yang paling banyak berinteraksi denganmu hari ini?</label>
+          <label><input type="radio" name="interacted-with" value="friend"> Teman</label>
+          <label><input type="radio" name="interacted-with" value="family"> Keluarga</label>
+          <label><input type="radio" name="interacted-with" value="teacher"> Guru</label>
+          <label><input type="radio" name="interacted-with" value="new-person"> Orang baru</label>
+        </div>
+        <div class="question">
+          <label>10. Apakah ada konflik dengan orang lain hari ini? Jika ya, bagaimana kamu menyelesaikannya?</label>
+          <textarea name="conflict-resolution"></textarea>
+        </div>
+        <div class="question">
+          <label>11. Apa yang kamu pelajari dari interaksi sosial hari ini?</label>
+          <input type="text" name="social-learning">
+        </div>
+        <div class="question">
+          <label>12. Apa yang bisa kamu lakukan untuk memperbaiki hubunganmu dengan orang lain?</label>
+          <input type="text" name="relationship-improvement">
+        </div>
+      </div>
+
+      <!-- Bagian 4: Tujuan dan Hobi -->
+      <div class="section">
+        <h3>Bagian 4: Tujuan dan Hobi</h3>
+        <div class="question">
+          <label>13. Apa aktivitas favoritmu hari ini?</label>
+          <label><input type="radio" name="favorite-activity" value="music"> 🎵 Mendengarkan musik</label>
+          <label><input type="radio" name="favorite-activity" value="social-media"> 📱 Media sosial</label>
+          <label><input type="radio" name="favorite-activity" value="gaming"> 🎮 Main game</label>
+          <label><input type="radio" name="favorite-activity" value="sports"> 🏃‍♀️ Olahraga</label>
+          <label><input type="radio" name="favorite-activity" value="other"> Lainnya: <input type="text" name="other-activity"></label>
+        </div>
+        <div class="question">
+          <label>14. Apa yang ingin kamu ubah dalam dirimu besok?</label>
+          <input type="text" name="self-change">
+        </div>
+        <div class="question">
+          <label>15. Apa satu hal positif yang kamu pelajari tentang dirimu hari ini?</label>
+          <input type="text" name="positive-learning">
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Area untuk menampilkan hasil -->
+    <div id="result" class="result" style="display: none;">
+      <h2>Hasil Refleksi</h2>
+      <pre id="output"></pre>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

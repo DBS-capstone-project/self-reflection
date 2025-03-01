@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasil Refleksi</title>
+  <!-- Sesuaikan path CSS -->
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hasil Refleksi Harianmu</h1>
+    <div id="result-output"></div>
+
+    <div class="feedback" id="feedback-message"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  // Ambil data dari localStorage
+  const storedResult = localStorage.getItem('reflectionResult');
+  if (storedResult) {
+    const result = JSON.parse(storedResult);
+
+    // Tampilkan hasil
+    const outputDiv = document.getElementById('result-output');
+    let output = '';
+    for (const [key, value] of Object.entries(result)) {
+      output += `<strong>${key}:</strong> ${value}<br>`;
+    }
+    outputDiv.innerHTML = output;
+
+    // Tampilkan feedback berdasarkan kategori
+    const feedbackMessage = document.getElementById('feedback-message');
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category'); // Ambil parameter 'category' dari URL
+    switch (category) {
+      case 'kids':
+        feedbackMessage.textContent =
+          '"Kamu hebat karena sudah jujur pada dirimu sendiri hari ini! Setiap hari adalah kesempatan baru untuk belajar, bermain, dan menjadi lebih baik. Teruslah berusaha, dan ingat, kamu selalu bisa membuat hari esok lebih menyenangkan!"';
+        break;
+      case 'teens':
+        feedbackMessage.textContent =
+          '"Refleksi harianmu luar biasa! Kamu sedang berada di tahap hidup yang penuh tantangan, tetapi juga penuh peluang. Setiap langkah kecil yang kamu ambil hari ini membawamu lebih dekat ke impianmu. Tetap semangat, dan percayalah pada potensimu!"';
+        break;
+      case 'adults':
+        feedbackMessage.textContent =
+          '"Terima kasih telah meluangkan waktu untuk merenung hari ini. Hidup adalah perjalanan, dan setiap refleksi membantumu menjadi versi terbaik dari dirimu. Apapun tantangan yang kamu hadapi, ingatlah bahwa kamu memiliki kekuatan untuk mengubahnya menjadi peluang. Teruslah maju!"';
+        break;
+      default:
+        feedbackMessage.textContent = 'Terima kasih telah mengisi form refleksi!';
+    }
+  } else {
+    document.body.innerHTML = '<h1>Tidak ada hasil yang tersimpan.</h1>';
+  }
+});
+  </script>
+</body>
+</html>

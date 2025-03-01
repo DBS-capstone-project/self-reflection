@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Reflection Form - Anak-Anak</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Self-Reflection untuk Anak-Anak (6-12 Tahun)</h1>
+    <!-- Perhatikan atribut action di sini -->
+    <form id="reflection-form" action="results.html?category=kids" method="POST">
+      <!-- Bagian 1: Perasaan Hari Ini -->
+      <div class="section">
+        <h3>Bagian 1: Perasaan Hari Ini</h3>
+        <div class="question">
+          <label>1. Apa yang kamu rasakan hari ini?</label>
+          <label><input type="radio" name="feeling" value="happy"> 😊 Senang</label>
+          <label><input type="radio" name="feeling" value="neutral"> 🙂 Biasa saja</label>
+          <label><input type="radio" name="feeling" value="sad"> 😐 Sedikit sedih</label>
+          <label><input type="radio" name="feeling" value="very-sad"> 😢 Sangat sedih</label>
+        </div>
+        <div class="question">
+          <label>2. Apa hal terbaik yang terjadi hari ini?</label>
+          <input type="text" name="best-thing">
+        </div>
+        <div class="question">
+          <label>3. Apakah ada hal yang membuatmu kesal hari ini? Jika ya, ceritakan:</label>
+          <textarea name="upset"></textarea>
+        </div>
+        <div class="question">
+          <label>4. Apa yang kamu lakukan untuk merasa lebih baik jika sedih?</label>
+          <label><input type="radio" name="feel-better" value="play"> Bermain dengan teman</label>
+          <label><input type="radio" name="feel-better" value="music"> Mendengarkan musik/menonton kartun</label>
+          <label><input type="radio" name="feel-better" value="draw"> Menggambar/mewarnai</label>
+          <label><input type="radio" name="feel-better" value="other"> Lainnya: <input type="text" name="other-feel-better"></label>
+        </div>
+      </div>
+
+      <!-- Bagian 2: Sekolah dan Belajar -->
+      <div class="section">
+        <h3>Bagian 2: Sekolah dan Belajar</h3>
+        <div class="question">
+          <label>5. Bagaimana perasaanmu tentang sekolah hari ini?</label>
+          <label><input type="radio" name="school-feeling" value="very-happy"> 🟩 Sangat senang</label>
+          <label><input type="radio" name="school-feeling" value="happy"> 🟨 Cukup senang</label>
+          <label><input type="radio" name="school-feeling" value="unhappy"> 🟥 Tidak senang</label>
+        </div>
+        <div class="question">
+          <label>6. Pelajaran apa yang paling kamu sukai hari ini? Mengapa?</label>
+          <input type="text" name="favorite-lesson">
+        </div>
+        <div class="question">
+          <label>7. Apakah kamu merasa kesulitan belajar pelajaran tertentu? Jika ya, sebutkan:</label>
+          <textarea name="difficulty"></textarea>
+        </div>
+        <div class="question">
+          <label>8. Apa yang ingin kamu pelajari besok?</label>
+          <input type="text" name="learn-tomorrow">
+        </div>
+      </div>
+
+      <!-- Bagian 3: Hubungan dengan Teman dan Keluarga -->
+      <div class="section">
+        <h3>Bagian 3: Hubungan dengan Teman dan Keluarga</h3>
+        <div class="question">
+          <label>9. Siapa yang paling banyak bermain denganmu hari ini?</label>
+          <label><input type="radio" name="played-with" value="friend"> Teman</label>
+          <label><input type="radio" name="played-with" value="sibling"> Saudara</label>
+          <label><input type="radio" name="played-with" value="parent"> Orang tua</label>
+          <label><input type="radio" name="played-with" value="alone"> Sendirian</label>
+        </div>
+        <div class="question">
+          <label>10. Apa yang kamu sukai dari teman/saudaramu?</label>
+          <input type="text" name="like-about-them">
+        </div>
+        <div class="question">
+          <label>11. Apakah kamu bertengkar dengan teman/saudaramu hari ini? Jika ya, bagaimana kamu menyelesaikannya?</label>
+          <textarea name="fight-resolution"></textarea>
+        </div>
+        <div class="question">
+          <label>12. Apa yang bisa kamu lakukan untuk menjadi lebih baik?</label>
+          <input type="text" name="improvement">
+        </div>
+      </div>
+
+      <!-- Bagian 4: Aktivitas Favorit -->
+      <div class="section">
+        <h3>Bagian 4: Aktivitas Favorit</h3>
+        <div class="question">
+          <label>13. Apa aktivitas favoritmu hari ini?</label>
+          <label><input type="radio" name="favorite-activity" value="drawing"> 🎨 Menggambar/mewarnai</label>
+          <label><input type="radio" name="favorite-activity" value="reading"> 📚 Membaca buku</label>
+          <label><input type="radio" name="favorite-activity" value="playing-outside"> 🏃‍♂️ Bermain di luar</label>
+          <label><input type="radio" name="favorite-activity" value="gaming"> 🎮 Main game</label>
+          <label><input type="radio" name="favorite-activity" value="other"> Lainnya: <input type="text" name="other-activity"></label>
+        </div>
+        <div class="question">
+          <label>14. Apa yang ingin kamu coba lakukan besok?</label>
+          <input type="text" name="try-tomorrow">
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Area untuk menampilkan hasil -->
+    <div id="result" class="result" style="display: none;">
+      <h2>Hasil Refleksi</h2>
+      <pre id="output"></pre>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Reflection Form - Dewasa</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Self-Reflection untuk Dewasa (19+ Tahun)</h1>
+    <!-- Perhatikan atribut action di sini -->
+    <form id="reflection-form" action="results.html?category=adults" method="POST">
+      <!-- Bagian 1: Emosi dan Kesejahteraan Mental -->
+      <div class="section">
+        <h3>Bagian 1: Emosi dan Kesejahteraan Mental</h3>
+        <div class="question">
+          <label>1. Seberapa puaskah kamu dengan harimu hari ini?</label>
+          <label><input type="radio" name="satisfaction" value="5"> ⭐⭐⭐⭐⭐ Sangat puas</label>
+          <label><input type="radio" name="satisfaction" value="4"> ⭐⭐⭐⭐ Cukup puas</label>
+          <label><input type="radio" name="satisfaction" value="3"> ⭐⭐⭐ Biasa saja</label>
+          <label><input type="radio" name="satisfaction" value="2"> ⭐⭐ Kurang puas</label>
+          <label><input type="radio" name="satisfaction" value="1"> ⭐ Tidak puas sama sekali</label>
+        </div>
+        <div class="question">
+          <label>2. Apa yang paling memengaruhi suasana hatimu hari ini?</label>
+          <input type="text" name="mood-influence">
+        </div>
+        <div class="question">
+          <label>3. Seberapa sering kamu merasa stres akhir-akhir ini?</label>
+          <label><input type="radio" name="stress-level" value="rarely"> 🟩 Jarang sekali</label>
+          <label><input type="radio" name="stress-level" value="sometimes"> 🟨 Kadang-kadang</label>
+          <label><input type="radio" name="stress-level" value="often"> 🟥 Sering</label>
+        </div>
+        <div class="question">
+          <label>4. Apa yang kamu lakukan untuk meredakan stres?</label>
+          <input type="text" name="stress-relief">
+        </div>
+      </div>
+
+      <!-- Bagian 2: Karier dan Pekerjaan -->
+      <div class="section">
+        <h3>Bagian 2: Karier dan Pekerjaan</h3>
+        <div class="question">
+          <label>5. Seberapa puaskah kamu dengan pekerjaanmu hari ini?</label>
+          <label><input type="radio" name="job-satisfaction" value="5"> ⭐⭐⭐⭐⭐ Sangat puas</label>
+          <label><input type="radio" name="job-satisfaction" value="4"> ⭐⭐⭐⭐ Cukup puas</label>
+          <label><input type="radio" name="job-satisfaction" value="3"> ⭐⭐⭐ Biasa saja</label>
+          <label><input type="radio" name="job-satisfaction" value="2"> ⭐⭐ Kurang puas</label>
+          <label><input type="radio" name="job-satisfaction" value="1"> ⭐ Tidak puas sama sekali</label>
+        </div>
+        <div class="question">
+          <label>6. Apa pencapaian terbesarmu hari ini?</label>
+          <input type="text" name="achievement">
+        </div>
+        <div class="question">
+          <label>7. Apa tantangan terbesar yang kamu hadapi hari ini? Bagaimana cara kamu mengatasinya?</label>
+          <textarea name="challenge"></textarea>
+        </div>
+        <div class="question">
+          <label>8. Apa langkah konkret yang akan kamu ambil untuk mencapai tujuan kariermu?</label>
+          <input type="text" name="career-step">
+        </div>
+      </div>
+
+      <!-- Bagian 3: Hubungan Interpersonal -->
+      <div class="section">
+        <h3>Bagian 3: Hubungan Interpersonal</h3>
+        <div class="question">
+          <label>9. Siapa yang paling banyak berinteraksi denganmu hari ini?</label>
+          <label><input type="radio" name="interacted-with" value="partner"> Pasangan</label>
+          <label><input type="radio" name="interacted-with" value="family"> Keluarga</label>
+          <label><input type="radio" name="interacted-with" value="colleague"> Rekan kerja</label>
+          <label><input type="radio" name="interacted-with" value="new-person"> Orang baru</label>
+        </div>
+        <div class="question">
+          <label>10. Apakah ada konflik dengan orang lain hari ini? Jika ya, bagaimana kamu menyelesaikannya?</label>
+          <textarea name="conflict-resolution"></textarea>
+        </div>
+        <div class="question">
+          <label>11. Apa yang kamu pelajari dari interaksi sosial hari ini?</label>
+          <input type="text" name="social-learning">
+        </div>
+        <div class="question">
+          <label>12. Apa yang bisa kamu lakukan untuk memperbaiki hubunganmu dengan orang lain?</label>
+          <input type="text" name="relationship-improvement">
+        </div>
+      </div>
+
+      <!-- Bagian 4: Tujuan Hidup dan Kontribusi -->
+      <div class="section">
+        <h3>Bagian 4: Tujuan Hidup dan Kontribusi</h3>
+        <div class="question">
+          <label>13. Seberapa yakin kamu dengan tujuan hidupmu saat ini?</label>
+          <label><input type="radio" name="life-purpose-confidence" value="5"> ⭐⭐⭐⭐⭐ Sangat yakin</label>
+          <label><input type="radio" name="life-purpose-confidence" value="4"> ⭐⭐⭐⭐ Cukup yakin</label>
+          <label><input type="radio" name="life-purpose-confidence" value="3"> ⭐⭐⭐ Biasa saja</label>
+          <label><input type="radio" name="life-purpose-confidence" value="2"> ⭐⭐ Kurang yakin</label>
+          <label><input type="radio" name="life-purpose-confidence" value="1"> ⭐ Tidak yakin sama sekali</label>
+        </div>
+        <div class="question">
+          <label>14. Apa kontribusi terbesar yang ingin kamu berikan kepada masyarakat?</label>
+          <input type="text" name="contribution">
+        </div>
+        <div class="question">
+          <label>15. Apa satu hal positif yang kamu pelajari tentang dirimu hari ini?</label>
+          <input type="text" name="positive-learning">
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Area untuk menampilkan hasil -->
+    <div id="result" class="result" style="display: none;">
+      <h2>Hasil Refleksi</h2>
+      <pre id="output"></pre>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
